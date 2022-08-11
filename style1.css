@@ -1,0 +1,471 @@
+/*
+đây là cách reset css
+*/
+/* 
+ghi chú
+thẻ block có độ rộng full của  thẻ chứa nó , có thể padding top , left , righ , bottom đc
+thẻ inline chỉ padding width khi padding sẽ đảy ra như các hình khối ngoài đời , ko height đc
+khi tìm icon nhớ nhấm ctrl + f
+cài đặt auto rename tag
+luu y có thể bị ghi đè
+
+
+*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+} 
+html{
+    scroll-behavior: smooth; /*luu y*/
+    font-family:Arial, Helvetica, sans-serif ;
+}
+/*
+1. vị trí 
+2. kích thước
+3. màu sắc
+4. kiểu dáng (kiều chữ , hình tròn , ...)
+1. từ trên xuống dưới , từ ngoài vào trong , từ tổng quan đến chi tiết
+display: inline ko set dc chieu rong va chieu cao , kich thuoc se la auto auto
+display: inline-block ,set duoc chieu cao va chieu rong , kich thuoc se dc xac dinh , nhung khong kế thừa chiều ngang của thẻ chứa nó 
+display: block ,  kế thừa chiều ngang của thẻ chứa nó
+*/
+
+.clear{
+    clear:both;
+}
+.text-white{
+    color:#fff !important;
+}
+
+#main{
+
+}
+/* common , dung chung */
+.pull-right{
+    float:right !important;
+}
+.btn{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 7px 13px;
+    display: inline-block;
+    margin-top:6px;
+    border:none;
+}
+.btn:hover{
+    cursor:pointer;
+    background-color: rgb(101, 96, 96);
+    color:#000;
+}
+.row::after{
+    content:"";
+    display:block;
+    clear:both;
+
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top:16px !important;
+}
+.row{
+    margin-left:-8px;
+    margin-right:-8px;
+}
+.column{
+    float:left;
+    padding-left:8px;
+    padding-right:8px;
+}
+.column-third{
+    width:33.3333%;
+}
+.column-half{
+    width:50%;
+}
+.text-center{
+    text-align: center !important;
+}
+.column-full{
+    width:100%;
+}
+
+/* header */
+#header  .icon-search{
+   color:#fff;
+   font-size: 22px;
+   line-height: 46px;
+   padding: 0 18px;
+}
+.button-search-header:hover{
+    background-color:red;
+    cursor: pointer;
+}
+#header .button-search-header{
+float:right;
+}
+
+#header{
+    position:fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 46px;
+    background-color: black;
+}
+#nav , .subnav{
+    list-style-type:none;
+}
+#nav {
+    display:inline-block;
+}
+#nav >li{
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+#nav >li> a{
+    color:white;
+    text-transform: uppercase;
+    padding:  0  15px;
+}
+
+#nav li a {
+    text-decoration: none ;
+    line-height: 46px ;
+    padding: 0 24px ;
+    display:block;
+    
+}
+
+#nav >li:hover> a{
+    color: black;
+    background-color: rgb(126, 49, 49);
+    
+}
+#nav .subnav  {
+    
+    top:100%;
+    left:0 px ;
+    min-width: 160px ;
+    display: none;
+    position:absolute;
+    background-color: white;
+    box-shadow: 0 0 10px black ;
+}
+
+#nav .subnav  li a {
+    color: black;
+    padding: 0 12px;
+}
+#nav .subnav li:hover{
+    color: black;
+    background-color: rgb(126, 49, 49);
+  
+}
+#nav li:hover .subnav {
+    display: block;
+   
+}
+/* slider */
+
+#slider{
+    
+    margin-top:46px;
+    padding-top: 50%;
+    background-image: url(/img/place3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#slider .text-content{
+   text-align: center;
+
+
+    }
+#slider .text-heading{
+   font-weight: 500;
+   color:white;
+   margin-bottom: 25px;
+   text-align:center;
+    }
+#slider .text-description{
+    font-size: 24px;
+    color:white;
+    
+    }
+#content .content-section{
+width:800px;
+
+margin-left:auto;
+margin-right: auto;
+padding:60px 0 112px;
+
+
+}
+#content .section-heading{
+    text-align: center;
+    font-size: 30px ;
+    font-weight: 100 ;
+    letter-spacing: 5px ;/* khong cach giua cac chu so */
+    margin-bottom: 20px;
+}
+#content .section-sub-heading{
+    text-align:center;
+    font-size: 15px;
+    margin-bottom: 10px; 
+    font-style: italic; /* kieu chu in nghieng*/
+    opacity: 0.8; /* gia tri cua opactiy tu 0 den 1*/
+}
+#content .about-text{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5 ;/* do dai cua cac dong */
+}
+ 
+#content .member-list{
+    margin-top: 48px ;
+    
+}
+#content .member-name{
+    font-size: 16px ;
+   
+}
+#content .member-img{
+    margin-top:12px;
+    width:155px;
+    border-radius: 22px;
+}
+/* tour-section */
+.tour-section{
+    background-color:#000;
+}
+.tickets-list{
+    background-color:#fff;
+    margin-top:40px;
+    list-style: none;
+    
+}
+.tickets-list .sold-out{
+    background-color: red;
+    padding: 3px 4px;
+    color: #fff;
+    margin-left: 5px;
+}
+.tickets-list .quantity{
+    float: right;
+    width: 28px;
+    height: 28px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    margin-top: -3;
+}
+.tickets-list li {
+    font-size: 18px;
+    padding: 18px;
+    border-bottom: 1px solid #000;
+}
+/* places */
+.places-list{
+  margin-top:32px;
+  
+}
+
+
+.places-img{
+width:100%;
+display:block;
+}
+.places-img:hover{
+    opacity: 0.5;
+}
+.places-body{
+    background-color:#fff;
+    padding: 16px;
+    font-size:17px;
+    
+   
+}
+.places-heading{
+    font-weight: 550;
+    font-size:17px;
+}
+.places-time{
+margin-top:15px;
+}
+.places-dsc{
+margin-top:15px;
+line-height: 1.2;
+}
+.btn{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 7px 13px;
+    display: inline-block;
+    margin-top:6px;
+}
+.btn:hover{
+    background-color: rgb(101, 96, 96);
+    color:#000;
+}
+
+/* contact  */
+.contact-info{
+    font-size: 18px ;
+}
+.contact-info i[class*="ti-"] {     
+    /*cach css nang cao
+    the p là thẻ inline nên phải dùng display:inline-block;
+    */
+    line-height: 1.6;
+    width:30px;
+    display:inline-block;
+}
+.contact-form{
+    font-size: 16px;
+}
+.contact-form .form-control{
+    padding:10px;
+    border: 2px solid #ccc;
+    width:100%;
+    outline: none; /* luu y*/
+}
+      /*map-section*/
+       .map-section > .huynopro {
+        width:100%; /*chiều rộng = 100% thẻ chứa thẻ img*/
+      }
+    /* footer*/
+#footer{
+    padding:64px 16px;
+    text-align: center;
+}
+#footer .social-list{
+    font-size: 30px;
+
+}
+#footer .social-list > a  {
+    text-decoration: none;
+    color:rgb(9, 176, 95);
+}
+#footer .social-list a:hover {
+    color:rgba(9, 176, 95,0.3);
+}
+.copyright{
+    margin-top: 18px;
+    color:rgb(9, 176, 95);
+}
+#footer .copyright > a{
+    color:rgb(5, 54, 30);
+    
+}
+#footer .copyright > a:hover{
+    color:rgba(5, 54, 30,0.5);
+}
+
+
+/* model  */
+
+.model{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+.open{
+    display:flex;
+}
+.container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position:relative;
+    max-width:calc(100% - 32px);  /*lưu ý line này */
+    animation:modelFaceIn ease 1.3s; /* lưu ý */
+} 
+.model-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #fff;
+}
+.model .container .ti-bag{
+    margin-right:8px;
+}
+.model-close{
+    position:absolute;
+    right:1;
+    top:1;
+    /* dùng padding để chỉnh kích thước của nút close */
+    padding:12px;
+    cursor:pointer;
+    opacity: 0.77;     
+    /* opacity là mờ đi tu 0>1 */
+}
+.model-close:hover{
+    opacity:1;
+}
+.model-body {
+    padding: 22px;
+    background-color: #fff;
+}
+.model-label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+}
+.modal-input {
+    width: 100%;
+    border: 3px solid #888;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+#buy-tickets {
+    width: 100%;
+    height: 49px;
+    background-color:#009688;
+    border:none;
+    color:#fff;
+    font-size:22px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#buy-tickets:hover{
+    opacity:0.7;
+}
+.model-footer{
+    padding:18px;
+    text-align:right;
+    
+}
+.model-footer > .model-help > a{
+    color:#2196f3;
+}
+@keyframes modelFaceIn{
+    from{
+
+        transform: translateY(-122px);
+
+    }
+    to{
+        transform: translateY();
+    }
+}
