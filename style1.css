@@ -94,7 +94,7 @@ display: block ,  kế thừa chiều ngang của thẻ chứa nó
 }
 
 /* header */
-#header  .icon-search{
+#header  .ti-search{
    color:#fff;
    font-size: 22px;
    line-height: 46px;
@@ -177,7 +177,7 @@ float:right;
     
     margin-top:46px;
     padding-top: 50%;
-    background-image: url(/img/place3.jpg);
+    background-image: url(map4.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
